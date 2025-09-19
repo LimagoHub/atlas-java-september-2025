@@ -8,16 +8,24 @@ public class Punkt {
     private double y;
 
     public Punkt() {
-        x = y = 0;
+
+        this(0,0);
+    }
+
+    public Punkt(final double x, final double y) {
+        setX(x);
+        setY(y);
     }
 
     public double getX() {
+        
         return this.x;
     }
 
     private void setX( double x) {
         if(x > MAX) { x = MAX;}
         if(x < -MAX) { x = -MAX;}
+
         this.x = x;
     }
 
@@ -41,7 +49,10 @@ public class Punkt {
     }
 
     public void rechts() {
-        setX(getX() + 1);
+        rechts(1.0);
+    }
+    public void rechts(double offset) {
+        setX(getX() + offset);
     }
     public void links() {
         setX(getX() - 1);

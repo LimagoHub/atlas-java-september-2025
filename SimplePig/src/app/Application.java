@@ -21,7 +21,7 @@ public class Application {
 
         Schwein piggy;
 
-        piggy = new Schwein();
+        piggy = new Schwein("Miss Piggy");
         System.out.println( Schwein.getCounter());
     }
 }
